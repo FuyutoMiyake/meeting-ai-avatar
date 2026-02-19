@@ -5,6 +5,20 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Exclude specific HTML files from SPA redirect
+[[redirects]]
+  from = "/touch.html"
+  to = "/touch.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/openclaw-voice.html"
+  to = "/openclaw-voice.html"
+  status = 200
+  force = true
+
+# SPA fallback for other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
